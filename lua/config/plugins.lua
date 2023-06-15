@@ -6,9 +6,27 @@ return {
     priority = 1000,
     config = function()
       -- load the colorscheme here
-      vim.cmd([[colorscheme tokyonight]])
-      require("config.colorscheme")
+      -- vim.cmd([[colorscheme tokyonight]])
+      -- require("config.colorscheme")
     end,
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- vim.cmd([[colorscheme catppuccin]])
+    end
+  },
+  {
+    "luisiacc/gruvbox-baby",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.g.gruvbox_baby_transparent_mode = 1
+      vim.cmd([[colorscheme gruvbox-baby]])
+    end
   },
   { "nvim-lua/plenary.nvim" },
   {
