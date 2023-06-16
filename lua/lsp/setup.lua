@@ -138,3 +138,10 @@ require("ufo").setup({
   fold_virt_text_handler = ufo_config_handler,
   close_fold_kinds = { "imports" },
 })
+
+vim.filetype.add({
+  [".env"] = "sh",
+  [".envrc"] = "sh",
+  ["*.env"] = "sh",
+  ["*.envrc"] = "sh",
+})
