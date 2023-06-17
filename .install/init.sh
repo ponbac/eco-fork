@@ -47,5 +47,11 @@ echo "https://github.com/settings/keys"
 echo "Press any key to continue when you are done..."
 read -n 1
 
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source ~/.bashrc
+source "$HOME/.cargo/env"
+rustup component add rust-analyzer
+
 echo
 echo "You are now ready to execute the install script!"
