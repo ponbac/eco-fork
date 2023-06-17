@@ -15,7 +15,8 @@ fzf \
 ripgrep \
 locate \
 neovim \
-xclip
+xclip \
+unzip
 
 # Install lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -24,10 +25,10 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
 # Install nvm and node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm install node
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+source ~/.bashrc
+fnm install 18.16.0
+fnm use 18.16.0
 
 # Create SSH key if it doesn't exist and copy it to clipboard
 if ! [ -f "$SSH_DIR/id_rsa.pub" ]; then
