@@ -42,12 +42,9 @@ echo
 echo "Copying SSH key to clipboard..."
 cat "$SSH_DIR/id_rsa.pub" | xclip -selection clipboard
 echo "SSH key copied to clipboard! Paste it into your GitHub account."
+echo "https://github.com/settings/keys"
 echo "Press any key to continue when you are done..."
 read -n 1
 
-# Ask user if they now want to run the ecovim installer
-echo "Do you want to run the ecovim installer now? [y/n]"
-read -n 1
-if [ "$REPLY" == "y" ]; then
-    bash run.sh
-fi
+echo
+echo "You are now ready to execute the install script!"
