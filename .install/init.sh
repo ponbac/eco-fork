@@ -29,9 +29,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 nvm install node
 
-# Refresh shell
-exec bash
-
 # Create SSH key if it doesn't exist and copy it to clipboard
 if ! [ -f "$SSH_DIR/id_rsa.pub" ]; then
     echo "SSH key not found. Generating one..."
